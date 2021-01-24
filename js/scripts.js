@@ -21,3 +21,11 @@ function changeLinkState() {
 
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
+
+// Табы
+new VanillaTabs({
+    'selector': '#tabs-v',	// default is ".tabs"
+    'type': 'vertical', 		// can be horizontal / vertical / accordion
+    'responsiveBreak': 840,	// tabs become accordion on this device width
+    'activeIndex': 0				// active tab index (starts from 0 ). Can be -1 for accordions.
+});

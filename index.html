@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио начинающего верстальщика</title>
+    <link rel="stylesheet" href="css/vanilla.tabs.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -52,15 +53,119 @@
     <main>
         <section class="section" id="about">
             <div class="about-block">
-                <h2 class="section-title">Обо мне</h2>
-                <p class="about-text"></p>
-            </div>            
+                <h2 class="section-title">Немного обо мне</h2>
+                <ul id="tabs-v" class="tabs">
+                    <li data-title="Обо мне">
+                        <p class="text">Приветствую Вас на моем сайте-портфолио! Меня зовут Денис и я начинающий верстальщик. Этот сайт-портфолио является результатом моего самообразования на таких ресурсах, как freeCodeCamp, MDN и Codepen. На данный момент моих навыков хватает, чтобы сверстать несложные веб-страницы и "оживить" их с помощью готовых JS-решений. К концу 2021 года намерен повысить уровень своих знаний в вёрстке, выучить разговорный английский, освоить основы JavaScript и стать Junior FrontEnd-Developer'ом.</p>
+                    </li>
+                    <li data-title="Инструменты">
+                        <ul class="skills-list">
+                            <li class="skills-list-item">ОС: <span class="monospace-text">Linux Mint</span></li>
+                            <li class="skills-list-item">Редактор исходного кода: <span class="monospace-text">VS Code</span></li>
+                            <li class="skills-list-item">Графический редактор: <span class="monospace-text">Avocode, PSDETCH</span></li>
+                        </ul>
+                    </li>
+                    <li data-title="Hard skills">
+                        <ul class="skills-list">
+                            <li class="skills-list-item">HTML5: <span class="monospace-text">базовые теги</span></li>
+                            <li class="skills-list-item">CSS3: <span class="monospace-text">flexbox, responsive design</span></li>
+                            <li class="skills-list-item">Препроцессор SASS: <span class="monospace-text">работа с переменными, вложенностями, фрагментированием и импортированием</span></li>
+                            <li class="skills-list-item">JS/jQuery: <span class="monospace-text">поиск и применение готовых решений</span></li>
+                            <li class="skills-list-item">Git: <span class="monospace-text">начальный уровень</span></li>
+                        </ul>
+                    </li>
+                    <li data-title="Soft skills">
+                        <ul class="skills-list">
+                            <li class="skills-list-item">Умение гуглить: <span class="monospace-text">StackOverflow и Habr — мои лучшие помощники</span></li>
+                            <li class="skills-list-item">Обучаемость: <span class="monospace-text">всегда с интересом изучаю что-нибудь новое</span></li>
+                            <li class="skills-list-item">Английский язык: <span class="monospace-text">на уровне чтения документации</span></li>
+                            <li class="skills-list-item">Коммуникабельность: <span class="monospace-text">всегда открыт к диалогу</span></li>
+                            <li class="skills-list-item">Гибкость: <span class="monospace-text">умею быстро адаптироваться/переключаться</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section class="section" id="works"></section>
-        <section class="section" id="#contacts"></section>
+        <section class="section" id="works">
+            <h2 class="section-title">Портфолио</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <a href="https://dennight.github.io/alphabet/" target="_blank" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fab fa-gripfire"></i>
+                            </div>
+                            <img src="img/alphabet.png" alt="alphabet slider" class="portfolio-img">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h3 class="portfolio-item-title">Свайпер-Алфавит</h3>
+                        <p class="portfolio-item-description">Верстка слайдера с помощью сторонней JS-библиотеки Swiper</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://dennight.github.io/simpleform/" class="portfolio-link" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fab fa-gripfire"></i>
+                            </div>
+                            <img src="img/simpleform.png" alt="simple form" class="portfolio-img">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h3 class="portfolio-item-title">SimpleForm</h3>
+                        <p class="portfolio-item-description">Вёрстка формы обратной связи</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://dennight.github.io/responsivetable/" class="portfolio-link" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fab fa-gripfire"></i>
+                            </div>
+                            <img src="img/responsivetable.png" alt="responsive table" class="portfolio-img">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h3 class="portfolio-item-title">Адаптивная таблица</h3>
+                        <p class="portfolio-item-description">Вёрстка таблицы и ее адаптация под мобильные экраны</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://dennight.github.io/majorarcanas/" class="portfolio-link" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fab fa-gripfire"></i>
+                            </div>
+                            <img src="img/majorarcanas.png" alt="major arcanas" class="portfolio-img">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h3 class="portfolio-item-title">Старшие Арканы Таро</h3>
+                        <p class="portfolio-item-description">Вёрстка "карточек" с 3D-анимацией</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://dennight.github.io/vibo/" class="portfolio-link" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fab fa-gripfire"></i>
+                            </div>
+                            <img src="img/vibo.png" alt="vibo" class="portfolio-img">
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h3 class="portfolio-item-title">Vibo</h3>
+                        <p class="portfolio-item-description">Вёрстка лендинга Vibo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="contacts"></section>
     </main>
     <footer></footer>
-    <script src="https://kit.fontawesome.com/5a1c92aaac.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/5a1c92aaac.js" crossorigin="anonymous"></script>
+    <script async src="js/vanilla.tabs.js"></script>
     <script async src="js/scripts.js"></script>
 </body>
 

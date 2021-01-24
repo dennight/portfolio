@@ -20,11 +20,18 @@ $blueviolet: #C198FF
     src: local(''), url('../fonts/roboto-condensed-v19-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-condensed-v19-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/roboto-condensed-v19-latin_cyrillic-700.woff') format('woff'), url('../fonts/roboto-condensed-v19-latin_cyrillic-700.ttf') format('truetype'), url('../fonts/roboto-condensed-v19-latin_cyrillic-700.svg#RobotoCondensed') format('svg')
 
 @font-face
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 400
+    src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot')
+    src: local(''), url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg') 
+
+@font-face
     font-family: 'Source Code Pro'
     font-style: normal
     font-weight: 400
     src: url('../fonts/source-code-pro-v13-latin_cyrillic-regular.eot')
-    src: local(''), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.woff') format('woff'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.ttf') format('truetype'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.svg#SourceCodePro') format('svg')    
+    src: local(''), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.woff') format('woff'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.ttf') format('truetype'), url('../fonts/source-code-pro-v13-latin_cyrillic-regular.svg#SourceCodePro') format('svg')
 
 *
     box-sizing: border-box
@@ -32,11 +39,10 @@ $blueviolet: #C198FF
     margin: 0
 
 body
-    font-family: 'Roboto Condensed', sans-serif
+    font-family: 'Roboto', sans-serif
     font-weight: 400
     font-size: 16px
-    letter-spacing: 1.5px
-    line-height: 1.1
+    line-height: 1.4
 
 @media screen and ( max-width: 998px )
     body
@@ -59,6 +65,10 @@ button
     border: 0
     cursor: pointer
 
+img
+    width: auto
+    max-width: 100%
+
 /* навигация
 
 .navbar
@@ -78,9 +88,11 @@ button
 
 @media screen and ( max-width: 998px )
     .navbar
-        padding: 0px 20px
+        padding: 20px 20px
 
 @media screen and ( max-width: 768px )
+    .navbar
+        padding: 0 20px
     .navbar.is-open
         height: 100vh
         align-items: start
@@ -133,6 +145,7 @@ button
 .menu-link
     color: $greenishwhite
     text-shadow: 1px 1px 1px rgb(0 0 0 / 60%)
+    letter-spacing: 1.5px
     &:hover
         color: $blueviolet
 
@@ -226,12 +239,14 @@ button
 
 /* общий стиль для блоков
 .section
-    height: 100vh
     width: 100%
+    padding-left: 100px
+    padding-right: 100px
 
 @media screen and ( max-width: 998px )
     .section:not(.header)
-        height: auto
+        padding-left: 20px
+        padding-right: 20px
 
 /* шапка
 .header
@@ -246,11 +261,12 @@ button
     background-attachment: fixed
     text-align: center
     padding: 50px
+    height: 100vh
 
 @media screen and ( max-width: 768px )
     .header
         padding: 25px
-    
+
 /* главный заголовок
 .heading
     font-size: 50px
@@ -300,6 +316,9 @@ button
         align-items: center
         height: 150px
 
+.social-buttons-item
+    padding: 20px
+
 .social-buttons-link
     border: 2px outset rgba(188, 255, 176, 0.9)
     text-shadow: 1px 1px 1px rgb(0 0 0)
@@ -314,7 +333,7 @@ button
         background-color: $lightgreen
         text-shadow: none
         color: $royalblue
-        
+
 #about
     background-image: url('../img/mountain-lake-931726_1920.jpg')
     background-position: center
@@ -323,19 +342,83 @@ button
     background-attachment: fixed
     display: flex
     align-items: start
+    justify-content: start
 
 .section-title
     font-size: 40px
-    text-transform: uppercase
+    text-transform: capitalize
     color: $white
     text-shadow: 2px 1px 2px #000
     font-weight: 700
     margin-bottom: 25px
 
+@media screen and ( max-width: 768px )
+    .section-title
+        font-size: 25px
+
 .about-block
     margin-top: 100px
-    margin-left: 80px
-    padding: 20px
-    text-align: left
-    background-color: rgba(65, 105, 255, .35)
+    padding: 20px 0    
 
+/* Табы
+.tabs.style__vertical .tabs__nav .tabs__nav_link
+    border: 1px solid $lightgreen
+    border-right: 0
+    margin: 3px 0
+    padding: 10px
+    background-color: rgba(65, 105, 255, .35)
+    display: block
+    color: $white
+
+.tabs.style__vertical .tabs__nav .tabs__nav_link.is__active
+    background-color: $royalblue
+
+.tabs.style__accordion .tabs__content, .tabs.is__responsive .tabs__content
+    background-color: $royalblue
+    color: $white
+
+.tabs.style__vertical .tabs__content.is__active
+    background-color: $royalblue
+    color: $white
+    border: 1px solid $lightgreen
+
+.text
+    font-weight: 400
+    font-size: 16px
+
+.skills-list
+    padding-left: 20px
+
+.skills-list-item
+    font-weight: 400
+    font-size: 16px
+    margin-bottom: 3px
+    list-style-image: url(../img/check-mark.svg)
+    padding-inline-start: 2px
+
+.monospace-text    
+    color: $white
+    text-shadow: 1px 1px 1px #000
+
+/* блок с портфолио
+#works
+    background-image: url(../img/laptop-336378_1920.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    .section-title
+        text-align: center
+        padding-top: 50px
+
+/* портфолио
+
+
+
+/* блок с контактами    
+#contacts
+    background-image: url(../img/skyscraper-3196390_1920.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
