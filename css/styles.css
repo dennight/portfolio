@@ -170,6 +170,7 @@ img {
   color: #F1FFE3;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
+  font-weight: 700;
 }
 .logo:hover {
   color: #C198FF;
@@ -207,6 +208,8 @@ img {
   color: #F1FFE3;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .menu-link:hover {
   color: #C198FF;
