@@ -84,7 +84,7 @@ img
     justify-content: space-between
     align-items: center
     padding: 25px 100px
-    background-color: rgba(65, 105, 255, .35)
+    background-color: rgba(65, 105, 255, .7)
 
 @media screen and ( max-width: 998px )
     .navbar
@@ -343,6 +343,11 @@ img
     display: flex
     align-items: start
     justify-content: start
+    height: 100vh
+
+@media screen and ( max-width: 998px )
+    #about
+        height: auto
 
 .section-title
     font-size: 40px
@@ -396,7 +401,7 @@ img
     list-style-image: url(../img/check-mark.svg)
     padding-inline-start: 2px
 
-.monospace-text    
+.span-text    
     color: $white
     text-shadow: 1px 1px 1px #000
 
@@ -407,13 +412,103 @@ img
     background-repeat: no-repeat
     background-size: cover
     background-attachment: fixed
+    padding-bottom: 50px
+    display: flex
+    flex-direction: column
+    align-items: center
     .section-title
         text-align: center
         padding-top: 50px
 
 /* портфолио
+.portfolio
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    max-width: 1000px
 
+@media screen and (max-width: 768px) and (orientation: landscape)
+    .portfolio
+        max-width: 500px
+        flex-direction: column
+        align-items: center
 
+@media screen and (max-width: 768px)
+    .portfolio
+        flex-direction: column
+        align-items: center
+
+.portfolio-card
+    position: relative
+    cursor: pointer
+    &:hover
+        .close-face
+            background-color: transparent
+            transform: translateY(0)
+            .card-content
+                opacity: 1
+        .open-face
+            transform: translateY(0)
+
+.card-face
+    width: 300px
+    height: 200px
+    transition: all 0.5s
+
+.close-face
+    position: relative
+    background-color: rgba(65, 105, 255, .35)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+    transform: translateY(100px)
+    .card-content
+        transition: 0.5s
+        .card-img
+            max-width: 100%
+
+.open-face
+    position: relative
+    background-color: $royalblue
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8)
+    transform: translateY(-100px)
+
+.card-title
+    font-size: 24px
+    color: $white
+    font-weight: 400
+    font-family: 'Source Code Pro', monospace
+    margin-bottom: 5px
+
+@media screen and ( max-width: 768px )
+    .card-title
+        font-size: 20px
+
+.card-description
+    color: $white
+    font-size: 15px
+    margin-bottom: 15px
+
+.card-button
+    padding: 5px 20px
+    border: 1px solid $lightgreen
+    color: $white
+    font-family: 'Source Code Pro', monospace
+    transition: all 0.3s
+    &:nth-of-type(1)
+        margin-right: 5px
+    &:hover
+        background-color: $lightgreen
+        color: $blueviolet
+        text-shadow: 1px 1px 1px rgb(0 0 0)
+        transition: all 0.3s
 
 /* блок с контактами    
 #contacts
@@ -422,3 +517,23 @@ img
     background-repeat: no-repeat
     background-size: cover
     background-attachment: fixed
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100vh
+
+/* Подвал
+.footer    
+    height: 100px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: start
+    background-color: $royalblue
+
+.footer-content
+    color: $white
+    a
+        &:hover
+            color: $blueviolet
